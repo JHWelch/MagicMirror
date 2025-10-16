@@ -7,9 +7,9 @@
 const Module = Class.extend({
 
 	/**
-	 *******************************************************
-	 * All methods (and properties) below can be extended. *
-	 *******************************************************
+	 *********************************************************
+	 * All methods (and properties) below can be overridden. *
+	 *********************************************************
 	 */
 
 	// Set the minimum MagicMirror² module version for this module.
@@ -197,9 +197,9 @@ const Module = Class.extend({
 	},
 
 	/**
-	 *********************************************
-	 * The methods below should not be extended. *
-	 *********************************************
+	 ***********************************************
+	 * The methods below should not be overridden. *
+	 ***********************************************
 	 */
 
 	/**
