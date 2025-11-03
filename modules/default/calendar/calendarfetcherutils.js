@@ -107,7 +107,6 @@ const CalendarFetcherUtils = {
 
 		Log.debug("fix rrule start=", rule.options.dtstart);
 		Log.debug("event before rrule.between=", JSON.stringify(event, null, 2), "exdates=", event.exdate);
-
 		Log.debug(`RRule: ${rule.toString()}`);
 		rule.options.tzid = null; // RRule gets *very* confused with timezones
 
@@ -193,7 +192,7 @@ const CalendarFetcherUtils = {
 				}
 
 				Log.debug(`start: ${eventStartMoment.toDate()}`);
-				Log.debug(`end:: ${eventEndMoment.toDate()}`);
+				Log.debug(`end:   ${eventEndMoment.toDate()}`);
 
 				// Calculate the duration of the event for use with recurring events.
 				const durationMs = eventEndMoment.valueOf() - eventStartMoment.valueOf();
@@ -283,13 +282,11 @@ const CalendarFetcherUtils = {
 						} else {
 							Log.debug("not saving event ", recurrenceTitle, eventStartMoment);
 						}
-						Log.debug(" ");
 					}
 					// End recurring event parsing.
 				} else {
 					// Single event.
 					const fullDayEvent = isFacebookBirthday ? true : CalendarFetcherUtils.isFullDayEvent(event);
-					// Log.debug("full day event")
 
 					// if the start and end are the same, then make end the 'end of day' value (start is at 00:00:00)
 					if (fullDayEvent && eventStartMoment.valueOf() === eventEndMoment.valueOf()) {

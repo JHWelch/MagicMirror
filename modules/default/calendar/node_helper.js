@@ -16,7 +16,7 @@ module.exports = NodeHelper.create({
 		} else if (notification === "FETCH_CALENDAR") {
 			const key = payload.id + payload.url;
 			if (typeof this.fetchers[key] === "undefined") {
-				Log.error("Calendar Error. No fetcher exists with key: ", key);
+				Log.error("No fetcher exists with key: ", key);
 				this.sendSocketNotification("CALENDAR_ERROR", { error_type: "MODULE_ERROR_UNSPECIFIED" });
 				return;
 			}
@@ -41,7 +41,7 @@ module.exports = NodeHelper.create({
 		try {
 			new URL(url);
 		} catch (error) {
-			Log.error("Calendar Error. Malformed calendar url: ", url, error);
+			Log.error("Malformed calendar url: ", url, error);
 			this.sendSocketNotification("CALENDAR_ERROR", { error_type: "MODULE_ERROR_MALFORMED_URL" });
 			return;
 		}

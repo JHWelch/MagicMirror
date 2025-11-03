@@ -27,13 +27,11 @@ const fetcher = new CalendarFetcher(url, fetchInterval, [], maximumEntries, maxi
 
 fetcher.onReceive(function (fetcher) {
 	Log.log(fetcher.events());
-	Log.log("------------------------------------------------------------");
 	process.exit(0);
 });
 
 fetcher.onError(function (fetcher, error) {
-	Log.log("Fetcher error:");
-	Log.log(error);
+	Log.log("Fetcher error:", error);
 	process.exit(1);
 });
 

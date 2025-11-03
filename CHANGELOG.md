@@ -13,18 +13,29 @@ planned for 2026-01-01
 
 ### Added
 
+- [weather] feat: add configurable forecast date format option (#3918)
+- [core] Add new `server:watch` script to run MagicMirror² server-only with automatic restarts when files (defined in `config.watchTargets`) change (#3920)
+
 ### Changed
 
 - [core] refactor: replace `module-alias` dependency with internal alias resolver (#3893)
+- [check_config] refactor: improve error handling (#3927)
+- [calendar] test: remove "Recurring event per timezone" test (#3929)
+- [calendar] chore: remove `requiresVersion: "2.1.0"` (#3932)
+- [tests] migrate from `jest` to `vitest` (#3940)
 
 ### Fixed
 
 - feat: add ESlint rule `no-sparse-arrays` for config check to fix #3910 (#3911)
 - fixed eslint warnings shown in #3911 and updated npm publish docs (#3913)
+- [core] refactor: replace `express-ipfilter` with lightweight custom middleware (#3917) - This fixes security issue [CVE-2023-42282](https://github.com/advisories/GHSA-78xj-cgh5-2h22), which is not very likely to be exploitable in MagicMirror² setups, but still should be fixed.
+- fixed the Environment Canada weather URL (#3912) and now converts a windspeed of 'calm' to 0
+- fixed problems with daylight-saving-time in weather provider `openmeto` (#3930, #3931)
 
 ### Updated
 
-- [core] Update dependencies (#3909)
+- [core] Update dependencies (#3909, #3916, #3921, #3925, #3934)
+- [logger] Add prefixes to most Log messages (#3923, #3926)
 
 ## [2.33.0] - 2025-10-01
 
@@ -355,7 +366,7 @@ For more info, please read the following post: [A New Chapter for MagicMirror: T
 ### Fixed
 
 - [weather] Correct apiBase of weathergov weatherProvider to match documentation (#2926)
-- Worked around several issues in the RRULE library that were causing deleted calender events to still show, some
+- Worked around several issues in the RRULE library that were causing deleted calendar events to still show, some
   initial and recurring events to not show, and some event times to be off an hour. (#3291)
 - Skip changelog requirement when running tests for dependency updates (#3320)
 - Display precipitation probability when it is 0% instead of blank/empty (#3345)
