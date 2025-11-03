@@ -23,6 +23,7 @@ planned for 2026-01-01
 - [calendar] test: remove "Recurring event per timezone" test (#3929)
 - [calendar] chore: remove `requiresVersion: "2.1.0"` (#3932)
 - [tests] migrate from `jest` to `vitest` (#3940)
+- [weatherprovider] update override warning wording (#3914)
 
 ### Fixed
 
@@ -69,7 +70,6 @@ Thanks to: @Crazylegstoo, @dathbe, @m-idler, @plebcity, @khassel, @KristjanESPER
   - Improve test reliability and maintainability
 - [tests] add alert module tests for different welcome_message configurations (#3867)
 - [lint-staged] use `prettier --write --ignore-unknown` in `lint-staged` to avoid errors on unsupported files (#3888)
-- [weatherprovider] update override warning wording (#3914)
 
 ### Updated
 
