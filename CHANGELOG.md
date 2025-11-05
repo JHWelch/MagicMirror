@@ -22,7 +22,9 @@ planned for 2026-01-01
 - [check_config] refactor: improve error handling (#3927)
 - [calendar] test: remove "Recurring event per timezone" test (#3929)
 - [calendar] chore: remove `requiresVersion: "2.1.0"` (#3932)
-- [tests] migrate from `jest` to `vitest` (#3940)
+- [tests] migrate from `jest` to `vitest` (#3940, #3941)
+- [ci] Add concurrency to automated tests workflow to cancel outdated runs (#3943)
+- [tests] replace `node-libgpiod` with `serialport` in electron-rebuild workflow (#3945)
 - [weatherprovider] update override warning wording (#3914)
 
 ### Fixed
