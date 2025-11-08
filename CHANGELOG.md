@@ -16,6 +16,10 @@ planned for 2026-01-01
 - [weather] feat: add configurable forecast date format option (#3918)
 - [core] Add new `server:watch` script to run MagicMirror² server-only with automatic restarts when files (defined in `config.watchTargets`) change (#3920)
 
+### Removed
+
+- [weather] Removed deprecated ukmetoffice datapoint provider (#3842, #3952)
+
 ### Changed
 
 - [core] refactor: replace `module-alias` dependency with internal alias resolver (#3893)
@@ -25,6 +29,7 @@ planned for 2026-01-01
 - [tests] migrate from `jest` to `vitest` (#3940, #3941)
 - [ci] Add concurrency to automated tests workflow to cancel outdated runs (#3943)
 - [tests] replace `node-libgpiod` with `serialport` in electron-rebuild workflow (#3945)
+- [calendar] hide repeatingCountTitle if the event count is zero (#3949)
 - [weatherprovider] update override warning wording (#3914)
 
 ### Fixed
@@ -34,10 +39,11 @@ planned for 2026-01-01
 - [core] refactor: replace `express-ipfilter` with lightweight custom middleware (#3917) - This fixes security issue [CVE-2023-42282](https://github.com/advisories/GHSA-78xj-cgh5-2h22), which is not very likely to be exploitable in MagicMirror² setups, but still should be fixed.
 - fixed the Environment Canada weather URL (#3912) and now converts a windspeed of 'calm' to 0
 - fixed problems with daylight-saving-time in weather provider `openmeto` (#3930, #3931)
+- [newsfeed] fixed header layout issue introduced with prettier njk linting (#3946)
 
 ### Updated
 
-- [core] Update dependencies (#3909, #3916, #3921, #3925, #3934)
+- [core] Update dependencies incl. electron to v39 (#3909, #3916, #3921, #3925, #3934)
 - [logger] Add prefixes to most Log messages (#3923, #3926)
 
 ## [2.33.0] - 2025-10-01
