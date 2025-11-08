@@ -15,10 +15,11 @@ planned for 2026-01-01
 
 - [weather] feat: add configurable forecast date format option (#3918)
 - [core] Add new `server:watch` script to run MagicMirror² server-only with automatic restarts when files (defined in `config.watchTargets`) change (#3920)
+- [weather] add error handling to fetch functions including cors (#3791)
 
 ### Removed
 
-- [weather] Removed deprecated ukmetoffice datapoint provider (#3842, #3952)
+- [weather] Removed deprecated `ukmetoffice` datapoint provider (#3842, #3952)
 
 ### Changed
 
@@ -31,6 +32,9 @@ planned for 2026-01-01
 - [tests] replace `node-libgpiod` with `serialport` in electron-rebuild workflow (#3945)
 - [calendar] hide repeatingCountTitle if the event count is zero (#3949)
 - [weatherprovider] update override warning wording (#3914)
+- [core] configure cspell to check default modules only and fix typos (#3955)
+- [core] refactor: replace `XMLHttpRequest` with `fetch` in `translator.js` (#3950)
+- [tests] migrate e2e tests to Playwright (#3950)
 
 ### Fixed
 
